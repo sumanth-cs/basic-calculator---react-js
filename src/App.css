@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Courier, monospace;
+}
+
+.app {
+  --primary_bg: #FF7000;
+  --cal_bg: #000;
+  --cal_btn: #FF7000;
+  --text: #fff;
+  --cal_navbar: #FF7000;
+}
+
+.app[data-theme="dark"] {
+  --primary_bg: #000;
+  --cal_bg: #FF7000;
+  --cal_btn: #000;
+  --text: #000;
+  --cal_navbar: #FF7000;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  height: 3px;
+  width: 3px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background-color: transparent;
+  margin-top: 25px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--cal_btn);
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: gray;
+}
+
+.app {
+  background: var(--primary_bg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app_cal {
+  height: 600px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 1px -1px 20px rgba(0, 0, 0, 0.14);
+  background-color: var(--cal_bg);
+  /* position: relative; */
+}
+
+.app_cal_navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--cal_navbar);
+  box-shadow: 1px -1px 20px rgba(0, 0, 0, 0.14);
+  min-height: 10px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px;
+  gap: 10px;
+}
+
+.app_cal_navbar img {
+  height: 35px;
+  width: 35px;
+}
+
+.app_cal_navbar_theme {
+  margin-left: 47%;
+}
